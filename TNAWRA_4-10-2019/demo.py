@@ -9,16 +9,7 @@ import time
 
 import pyfluv
 
-survey = pyfluv.StreamSurvey(r'C:\Users\rsjon_000\Documents\pyfluv\pyfluv\Data\myr5_survey_adjusted.csv')
-crosses = survey.get_cross_objects()
-pros = survey.get_profile_objects()
 
-plt.figure()
-crosses[5].qplot()
-plt.figure()
-crosses[5].planplot()
-
-plt.figure()
-pros[2].qplot(showFeatures=True)
-plt.figure()
-pros[2].planplot(showFeatures=True)
+eco = pyfluv.eco71()
+eco.qplot('Bankfull width')
+eco.trend('Bankfull width')
